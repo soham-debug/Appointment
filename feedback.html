@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Feedback Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+			display: flex;
+			flex-direction: columns;
+        }
+        .form-group label {
+            display: block;
+            font-weight: bold;
+        }
+        .form-group input[type="radio"] {
+            margin-right: 10px;
+        }
+        .form-group textarea {
+            width: 100%;
+            height: 100px;
+            resize: vertical;
+        }
+        .form-group button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Hospital Feedback Form</h2>
+        <form action="https://api.web3forms.com/submit" method="POST">
+			<input type="hidden" name="access_key" value="6ff34b49-8ed2-4fbe-b417-95f931edd28e">
+            <input type="text" name="Name" placeholder="Full Name" required>
+            <input type="email" name="Email" placeholder="Email" required>
+			<input type="text" name="Name" placeholder="Type of Treatment" required>
+            <div class="form-group">
+                <label for="rating">Overall Rating:</label><br>
+                <input type="radio" id="rating1" name="rating" value="1">
+                <label for="rating1">1</label>
+                <input type="radio" id="rating2" name="rating" value="2">
+                <label for="rating2">2</label>
+                <input type="radio" id="rating3" name="rating" value="3">
+                <label for="rating3">3</label>
+                <input type="radio" id="rating4" name="rating" value="4">
+                <label for="rating4">4</label>
+                <input type="radio" id="rating5" name="rating" value="5">
+                <label for="rating5">5</label>
+            </div>
+            <div class="form-group">
+                <label for="comments">Comments:</label>
+                <textarea id="comments" name="comments" placeholder="Enter your comments here"></textarea>
+            </div>
+            <div class="form-group">
+                <button type="submit">Submit Feedback</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
